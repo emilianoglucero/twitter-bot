@@ -1,11 +1,18 @@
 const express = require('express')
-const app = express()
+const app = express() // instantiate Express app
+
+const wakeUpDyno = require("./wokeDyno.js"); // module to prevent heroku dyno to sleep
+const DYNO_URL = "https://frozen-thicket-61973.herokuapp.com/"; // the url of my dyno
 
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 8000;
 }
-app.listen(port);
+
+app.listen(port, () => {
+    wakeUpDyno(DYNO_URL); // will start once server starts
+})
+
 
 // Twitter library
 var Twit = require('twit')

@@ -4,12 +4,16 @@
   "description": "a Twitter bot built in Node.js",
   "main": "bot.js",
   "dependencies": {
+    "express": "^4.17.1",
     "twit": "^2.2.11"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bot.js"
+  },
+  "engines": {
+    "node": "12.18.1"
   },
   "author": "Emiliano Lucero",
   "license": "ISC"

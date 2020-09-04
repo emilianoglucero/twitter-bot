@@ -231,6 +231,6 @@ function postTweet() {
 //
 // 3600000 ms = 1 hour, 1 hour * 6 = 6 hours  --> 3600000 * 6
 postTweet();
-setInterval(postTweet, 3600000 * 1)
+setInterval(postTweet, 3600000 * 6)
 
 
